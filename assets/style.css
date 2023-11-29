@@ -1,3 +1,14 @@
+body {
+    margin: 0;
+    max-height: 70vh;
+    background-color: black;
+}
+
+h1, h2 {
+    color:aliceblue;
+    background-color: black;
+}
+
 .text-center {
     text-align: center;
 }
@@ -9,14 +20,7 @@
     justify-content: space-around;
 }
 .box {
-    border: 1px solid black;
     padding: 4px;
-}
-
-.card-pile-left {
-    background-color: aquamarine;
-}
-
-.card-pile-right {
-    background-color: aqua;
+    color: aliceblue;
+    border: 2px solid white;
 }
