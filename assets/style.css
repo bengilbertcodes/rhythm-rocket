@@ -2,6 +2,8 @@ body {
     margin: 0;
     max-height: 70vh;
     background-color: black;
+    background-image: url(/assets/images/stars.jpg);
+    background-repeat: no-repeat;
 }
 
 h1, h2 {
@@ -23,4 +25,8 @@ h1, h2 {
     padding: 4px;
     color: aliceblue;
     border: 2px solid white;
+    height: 75px;
+    width: 150px;
+    text-align: center;
+    justify-content: center;
 }
