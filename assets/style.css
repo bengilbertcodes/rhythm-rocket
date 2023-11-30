@@ -24,10 +24,23 @@ h1, h2 {
 .box {
     padding: 4px;
     color: black;
-    background-color: azure;
+    background-color: white;
     border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: whitesmoke 3px 3px;
     height: 200px;
     width: 20rem;
     font-size: 150%;
     text-align: center;
+}
+
+img {
+    height: 190px;
+    width: 19rem;
+}
+
+.card-pile-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
