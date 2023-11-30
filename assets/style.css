@@ -26,9 +26,8 @@ h1, h2 {
     color: black;
     background-color: azure;
     border: 2px solid black;
-    height: 75px;
-    width: 150px;
+    height: 200px;
+    width: 20rem;
     font-size: 150%;
     text-align: center;
-    justify-content: center;
 }
