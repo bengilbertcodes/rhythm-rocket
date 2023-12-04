@@ -3,11 +3,11 @@
 body {
     margin: 0;
     max-height: 70vh;
-    background-color: black;
     background-image: url(images/cosmos.png);
     background-size: contain;
     font-family: 'Trispace';
 }
+
 
 h1, h2 {
     background-color:aliceblue;
@@ -50,7 +50,19 @@ h2 {
     height: 250px;
     width: 400px;
 }
-.box,
+
+.box {
+    display: flex;
+    padding: 4px;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: rgb(180, 127, 80) 3px 5px 3px;  
+    font-size: 150%;
+    justify-content: center;
+}
+
 .action-box {
     display: flex;
     padding: 4px;
@@ -67,3 +79,6 @@ h2 {
     height: 100px;
 }
 
+.clicked {
+    transform: scale(0.9);
+}
