@@ -2,7 +2,7 @@ body {
     margin: 0;
     max-height: 70vh;
     background-color: black;
-    background-image: url(/assets/images/cosmos.png);
+    background-image: url(/assets/images/cosmos.webp);
     background-size: cover;
 }
 
