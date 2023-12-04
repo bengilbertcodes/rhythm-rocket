@@ -2,8 +2,8 @@ body {
     margin: 0;
     max-height: 70vh;
     background-color: black;
-    background-image: url(../assets/images/cosmos.png);
-    background-size: cover;
+    background-image: url(images/cosmos.png);
+    background-size: contain;
 }
 
 h1, h2 {
@@ -35,8 +35,7 @@ h1, h2 {
 }
 
 img {
-    height: 190px;
-    width: 19rem;
+    height: 200px;
 }
 
 .card-pile-left {
