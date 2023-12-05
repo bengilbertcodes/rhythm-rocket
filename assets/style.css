@@ -10,8 +10,7 @@ body {
 
 
 h1, h2 {
-    background-color:aliceblue;
-    border: 3px solid white;
+    background: linear-gradient(to right, transparent , aliceblue 10% 90% , transparent); /* Set your initial background color */
 }
 
 h1 {
@@ -25,7 +24,6 @@ h2 {
 }
 
 .heading {
-    background-color: black;
     margin-left: 20%;
     margin-right: 20%;
 }
@@ -58,7 +56,7 @@ h2 {
     background-color: white;
     border: 2px solid black;
     border-radius: 10px;
-    box-shadow: rgb(180, 127, 80) 3px 5px 3px;  
+    box-shadow: gray 3px 5px 3px;  
     font-size: 150%;
     justify-content: center;
 }
@@ -71,9 +69,10 @@ h2 {
     background-color: white;
     border: 2px solid black;
     border-radius: 10px;
-    box-shadow: rgb(180, 127, 80) 3px 5px 3px;  
+    box-shadow: orange 3px 5px 3px;  
     font-size: 150%;
     justify-content: center;
+    cursor: pointer;
 }
 
 .action-box img {
