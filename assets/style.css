@@ -64,6 +64,7 @@ h2 {
 }
 
 .action-box {
+    position: relative;
     display: flex;
     padding: 4px;
     color: black;
@@ -77,6 +78,16 @@ h2 {
 
 .action-box img {
     height: 100px;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 150%;
 }
 
 .clicked {
