@@ -19,36 +19,43 @@ divElements.forEach(function(element) {
     });
   });
 
-  // create an array of question objects
-const allQuestions = [
-    {
-      Title: 'Light Blue Circle',
-      imageSrc: 'assets/images/light-blue-circle.webp',
-      audioSrc: 'assets/media/light-blue-circle.mp3',
-    },
-    {
-      Title: 'Red Wavy Line',
-      imageSrc: 'assets/images/red-wavy-line.webp',
-      audioSrc: 'assets/media/red-wavy-line.mp3',
-    },
-    {
-      Title: 'Green Square',
-      imageSrc: 'assets/images/green-square.webp',
-      audioSrc: 'assets/media/green-square.mp3',
-    },
-  ];
-  
-  let question = allQuestions[1];
-  
-  // this would get the question object from the questions array at index 1
-  // which would give you
-  // {
-  //  Title: "Red Circle",
-  //  imageSrc: "assets/images/redCircle.webp",
-  //  audioSrc: "assets/media/redCircle.mp3",
-  // }
-  // remember array starts at index 0 !!!
-  
-  //to get the tile then use
-  
-  let title = question.Title; // title variable will then contain "Red Circle"
+document.getElementById('start-button').addEventListener('click', function() {
+    displayRandomImages();
+})
+
+// Array of image paths
+var imageArray = [
+    'assets/images/light-blue-circle.webp',
+    'assets/images/red-wavy-line.webp',
+    'assets/images/green-square.webp',
+    // Add more image paths as needed
+];
+
+function displayRandomImages() {
+
+    // Remove existing images from the boxes
+    removeImagesFromBoxes();
+
+    // Display random images in the boxes
+    displayRandomImageInBox('shape-box');
+    displayRandomImageInBox('notes-box');
+}
+
+function removeImagesFromBoxes() {
+    
+    document.getElementById('shape-box').innerHTML = '';
+    document.getElementById('notes-box').innerHTML = '';
+}
+
+function displayRandomImageInBox(boxId) {
+    // Get a random image path from the array
+    var randomImagePath = imageArray[Math.floor(Math.random() * imageArray.length)];
+
+    // Create an image element
+    var img = document.createElement('img');
+    img.src = randomImagePath;
+    img.alt = 'Random Image';
+
+    // Append the image to the specified box
+    document.getElementById(boxId).appendChild(img);
+}
