@@ -48,32 +48,37 @@ const allElements = [
 ];
 
 function displayRandomElements() {
-
     // Remove existing elements from the boxes
     removeElementsFromBoxes();
 
-    // Display random element in the boxes
-    displayRandomElementInBox('shape-box', 'imageSrc');
-    displayRandomElementInBox('title-box', 'Title');
-    displayRandomElementInBox('notes-box', 'imageTwoSrc');
+    // Display random elements in the boxes from the same object
+    var randomElement = allElements[Math.floor(Math.random() * allElements.length)];
+    displayImageInBox('shape-box', randomElement.imageSrc);
+    displayTextInBox('title-box', randomElement.Title);
+    displayImageInBox('notes-box', randomElement.imageTwoSrc);
 }
 
 function removeElementsFromBoxes() {
-    
     document.getElementById('shape-box').innerHTML = '';
     document.getElementById('title-box').innerHTML = '';
     document.getElementById('notes-box').innerHTML = '';
 }
 
-function displayRandomElementInBox(boxId, property) {
-    // Get a random element path from the array
-    var randomElement = allElements[Math.floor(Math.random() * allElements.length)];
+function displayImageInBox(boxId, imageSrc) {
+    // Create an image element
+    var img = document.createElement('img');
+    img.src = imageSrc;
+    img.alt = 'Random Image';
 
-     // Create an element
-    var element = document.createElement('div');
-    element.textContent = randomElement[property];
-
-    // Append the image element to the specified box
-    document.getElementById(boxId).appendChild(element);
+    // Append the image to the specified box
+    document.getElementById(boxId).appendChild(img);
 }
 
+function displayTextInBox(boxId, text) {
+    // Create a text element
+    var textElement = document.createElement('div');
+    textElement.textContent = text;
+
+    // Append the text to the specified box
+    document.getElementById(boxId).appendChild(textElement);
+}
