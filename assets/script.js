@@ -47,9 +47,15 @@ const allElements = [
     }
 ];
 
+var currentSelection = null;
+
 function displayRandomElements() {
     // Remove existing elements from the boxes
     removeElementsFromBoxes();
+
+    // Display a random element in the boxes, ensuring it's different from the current selection
+    var randomElement = getRandomDifferentElement();
+    currentSelection = randomElement;
 
     // Display random elements in the boxes from the same object
     var randomElement = allElements[Math.floor(Math.random() * allElements.length)];
@@ -81,4 +87,16 @@ function displayTextInBox(boxId, text) {
 
     // Append the text to the specified box
     document.getElementById(boxId).appendChild(textElement);
+}
+
+function getRandomDifferentElement() {
+    // Get a random element from the array
+    var randomElement = allElements[Math.floor(Math.random() * allElements.length)];
+
+    // If the random element is the same as the current selection, try again
+    while (randomElement === currentSelection) {
+        randomElement = allElements[Math.floor(Math.random() * allElements.length)];
+    }
+
+    return randomElement;
 }

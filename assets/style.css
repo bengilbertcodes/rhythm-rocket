@@ -61,6 +61,17 @@ h2 {
     justify-content: center;
 }
 
+#title-box {
+    font-size: 300%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    width: 350px;
+}
+
+
 .action-box {
     position: relative;
     display: flex;
