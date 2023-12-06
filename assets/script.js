@@ -20,45 +20,8 @@ divElements.forEach(function(element) {
   });
 
 document.getElementById('start-button').addEventListener('click', function() {
-    displayRandomImages();
+    displayRandomElements();
 })
-
-// Array of image paths
-var imageArray = [
-    'assets/images/light-blue-circle.webp',
-    'assets/images/red-wavy-line.webp',
-    'assets/images/green-square.webp',
-    // Add more image paths as needed
-];
-
-function displayRandomImages() {
-
-    // Remove existing images from the boxes
-    removeImagesFromBoxes();
-
-    // Display random images in the boxes
-    displayRandomImageInBox('shape-box');
-    displayRandomImageInBox('notes-box');
-}
-
-function removeImagesFromBoxes() {
-    
-    document.getElementById('shape-box').innerHTML = '';
-    document.getElementById('notes-box').innerHTML = '';
-}
-
-function displayRandomImageInBox(boxId) {
-    // Get a random image path from the array
-    var randomImagePath = imageArray[Math.floor(Math.random() * imageArray.length)];
-
-    // Create an image element
-    var img = document.createElement('img');
-    img.src = randomImagePath;
-    img.alt = 'Random Image';
-
-    // Append the image to the specified box
-    document.getElementById(boxId).appendChild(img);
-}
 
 // Create multi-dimensional array with the three elements - shape img, notes img, audio + title. 
 // call each element to different box when start is clicked
@@ -83,3 +46,34 @@ const allElements = [
         audioSrc: 'assets/media/red-wavy-line.mp3',
     }
 ];
+
+function displayRandomElements() {
+
+    // Remove existing elements from the boxes
+    removeElementsFromBoxes();
+
+    // Display random element in the boxes
+    displayRandomElementInBox('shape-box', 'imageSrc');
+    displayRandomElementInBox('title-box', 'Title');
+    displayRandomElementInBox('notes-box', 'imageTwoSrc');
+}
+
+function removeElementsFromBoxes() {
+    
+    document.getElementById('shape-box').innerHTML = '';
+    document.getElementById('title-box').innerHTML = '';
+    document.getElementById('notes-box').innerHTML = '';
+}
+
+function displayRandomElementInBox(boxId, property) {
+    // Get a random element path from the array
+    var randomElement = allElements[Math.floor(Math.random() * allElements.length)];
+
+     // Create an element
+    var element = document.createElement('div');
+    element.textContent = randomElement[property];
+
+    // Append the image element to the specified box
+    document.getElementById(boxId).appendChild(element);
+}
+
