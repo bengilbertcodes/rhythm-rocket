@@ -2,12 +2,14 @@
 
 body {
     margin: 0;
-    max-height: 70vh;
+    display: flex;
+
+    flex-direction: column;
+    min-height: 100vh;
     background-image: url(images/cosmos.png);
     background-size: contain;
     font-family: 'Trispace';
 }
-
 
 h1, h2 {
     background: linear-gradient(to right, transparent , aliceblue 10% 90% , transparent); /* Set your initial background color */
@@ -104,3 +106,10 @@ h2 {
     transform: scale(0.9);
 }
 
+/* footer styles */
+
+footer {
+    background-color: aliceblue;
+    height: 35px;
+    width: 100%;
+}
