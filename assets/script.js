@@ -19,6 +19,7 @@ divElements.forEach(function(element) {
     });
   });
 
+  //call displayRandomElement
 document.getElementById('start-button').addEventListener('click', function() {
     displayRandomElements();
 })
@@ -49,54 +50,60 @@ const allElements = [
 
 var currentSelection = null;
 
-function displayRandomElements() {
-    // Remove existing elements from the boxes
-    removeElementsFromBoxes();
+    function displayRandomElements() {
+        // Remove existing elements from the boxes
+        removeElementsFromBoxes();
 
-    // Display a random element in the boxes, ensuring it's different from the current selection
-    var randomElement = getRandomDifferentElement();
-    currentSelection = randomElement;
+        // Display a random element in the boxes, ensuring it's different from the current selection
+        var randomElement = getRandomDifferentElement();
+        currentSelection = randomElement;
 
-    // Display random elements in the boxes from the same object
-    var randomElement = allElements[Math.floor(Math.random() * allElements.length)];
-    displayImageInBox('shape-box', randomElement.imageSrc);
-    displayTextInBox('title-box', randomElement.Title);
-    displayImageInBox('notes-box', randomElement.imageTwoSrc);
-}
-
-function removeElementsFromBoxes() {
-    document.getElementById('shape-box').innerHTML = '';
-    document.getElementById('title-box').innerHTML = '';
-    document.getElementById('notes-box').innerHTML = '';
-}
-
-function displayImageInBox(boxId, imageSrc) {
-    // Create an image element
-    var img = document.createElement('img');
-    img.src = imageSrc;
-    img.alt = 'Random Image';
-
-    // Append the image to the specified box
-    document.getElementById(boxId).appendChild(img);
-}
-
-function displayTextInBox(boxId, text) {
-    // Create a text element
-    var textElement = document.createElement('div');
-    textElement.textContent = text;
-
-    // Append the text to the specified box
-    document.getElementById(boxId).appendChild(textElement);
-}
-
-function getRandomDifferentElement() {
-    // Get a random element from the array
-    var randomElement = allElements[Math.floor(Math.random() * allElements.length)];
-
-    // If the random element is the same as the current selection, try again
-    while (randomElement === currentSelection) {
-        randomElement = allElements[Math.floor(Math.random() * allElements.length)];
+        displayImageInBox('shape-box', randomElement.imageSrc);
+        displayTextInBox('title-box', randomElement.Title);
+        displayImageInBox('notes-box', randomElement.imageTwoSrc);
+        
+        // Change the start button text to 'Next Card' after the first click
+        changeButtonText('Next Card');
     }
 
-    return randomElement;
-}
+    function removeElementsFromBoxes() {
+        document.getElementById('shape-box').innerHTML = '';
+        document.getElementById('title-box').innerHTML = '';
+        document.getElementById('notes-box').innerHTML = '';
+    }
+
+    function displayImageInBox(boxId, imageSrc) {
+        // Create an image element
+        var img = document.createElement('img');
+        img.src = imageSrc;
+        img.alt = 'Random Image';
+
+        // Append the image to the specified box
+        document.getElementById(boxId).appendChild(img);
+    }
+
+    function displayTextInBox(boxId, text) {
+        // Create a text element
+        var textElement = document.createElement('div');
+        textElement.textContent = text;
+
+        // Append the text to the specified box
+        document.getElementById(boxId).appendChild(textElement);
+    }
+
+    function getRandomDifferentElement() {
+        // Get a random element from the array
+        var randomElement = allElements[Math.floor(Math.random() * allElements.length)];
+
+        // If the random element is the same as the current selection, try again
+        while (randomElement === currentSelection) {
+            randomElement = allElements[Math.floor(Math.random() * allElements.length)];
+        }
+
+        return randomElement;
+    }
+
+    function changeButtonText(newText) {
+        // Change the button text
+        document.getElementById('start-overlay-text').textContent = newText;
+    }
