@@ -59,3 +59,27 @@ function displayRandomImageInBox(boxId) {
     // Append the image to the specified box
     document.getElementById(boxId).appendChild(img);
 }
+
+// Create multi-dimensional array with the three elements - shape img, notes img, audio + title. 
+// call each element to different box when start is clicked
+
+const allElements = [
+    {
+        Title: 'Light Blue Circle',
+        imageSrc: 'assets/images/light-blue-circle.webp',
+        imageTwoSrc: 'assets/images/light-blue-circle-notes.webp',
+        audioSrc: 'assets/media/light-blue-circle.mp3',
+    },
+    {
+        Title: 'Green Square',
+        imageSrc: 'assets/images/green-square.webp',
+        imageTwoSrc: 'assets/images/green-square-notes.webp',
+        audioSrc: 'assets/media/green-square.mp3',
+    },
+    {
+        Title: 'Red Wavy Line',
+        imageSrc: 'assets/images/red-wavy-line.webp',
+        imageTwoSrc: 'assets/images/red-wavy-line-notes.webp',
+        audioSrc: 'assets/media/red-wavy-line.mp3',
+    }
+];
