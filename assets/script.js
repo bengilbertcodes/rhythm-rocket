@@ -24,6 +24,11 @@ document.getElementById('start-button').addEventListener('click', function() {
     displayRandomElements();
 })
 
+// call playAudio function when listenButton is clicked
+document.getElementById('listenButton').addEventListener('click', function() {
+    playAudio();
+})
+
 // Create multi-dimensional array with the three elements - shape img, notes img, audio + title. 
 // call each element to different box when start is clicked
 
@@ -64,6 +69,9 @@ var currentSelection = null;
         
         // Change the start button text to 'Next Card' after the first click
         changeButtonText('Next Card');
+
+        // Enable the "Listen" button and assign the audio source
+        enableListenButton(randomElement.audioSrc);
     }
 
     function removeElementsFromBoxes() {
@@ -106,4 +114,20 @@ var currentSelection = null;
     function changeButtonText(newText) {
         // Change the button text
         document.getElementById('start-overlay-text').textContent = newText;
+    }
+
+    function enableListenButton(audioSrc) {
+        // Enable the "Listen" button and assign the audio source
+        var listenButton = document.getElementById('listenButton');
+        listenButton.disabled = false;
+        listenButton.dataset.audioSrc = audioSrc; // Store audio source in a data attribute
+    }
+
+    function playAudio() {
+        // Get the audio source from the data attribute
+        var audioSrc = document.getElementById('listenButton').dataset.audioSrc;
+
+        // Play the audio
+        var audio = new Audio(audioSrc);
+        audio.play();
     }
