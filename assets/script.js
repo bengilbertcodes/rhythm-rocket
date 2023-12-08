@@ -29,6 +29,11 @@ document.getElementById('listenButton').addEventListener('click', function() {
     playAudio();
 })
 
+// call resetGame to when reset button is pressed
+document.getElementById('restart-box').addEventListener('click', function() {
+    resetGame();
+})
+
 // Create multi-dimensional array with the three elements - shape img, notes img, audio + title. 
 // call each element to different box when start is clicked
 
@@ -117,17 +122,37 @@ var currentSelection = null;
     }
 
     function enableListenButton(audioSrc) {
-        // Enable the "Listen" button and assign the audio source
+        
+        // Enable the Listen button and assign the audio source
         var listenButton = document.getElementById('listenButton');
         listenButton.disabled = false;
         listenButton.dataset.audioSrc = audioSrc; // Store audio source in a data attribute
     }
 
     function playAudio() {
+
+        var startText = document.getElementById('start-overlay-text').textContent;
+
+        if (startText === 'Next Card') {
+
         // Get the audio source from the data attribute
         var audioSrc = document.getElementById('listenButton').dataset.audioSrc;
 
         // Play the audio
         var audio = new Audio(audioSrc);
         audio.play();
+        }
+    }
+
+    function resetGame() {
+        //returns the game to its opening state
+        // remove existing elements from the boxes
+        removeElementsFromBoxes();
+
+        // reset the selection
+        currentSelection = null;
+
+        //change button text back to start
+        changeButtonText('Start');
+
     }
