@@ -92,7 +92,7 @@ var currentSelection = null;
         img.alt = 'Random Image';
 
         // Append the image to the specified box
-        document.getElementById(boxId).appendChild(img);
+        document.getElementById(boxId).innerHTML = '<img src="' + imageSrc + '" alt="Random Image of shape and music notes">';
     }
 
     function displayTextInBox(boxId, text) {
@@ -101,7 +101,7 @@ var currentSelection = null;
         textElement.textContent = text;
 
         // Append the text to the specified box
-        document.getElementById(boxId).appendChild(textElement);
+        document.getElementById(boxId).innerHTML = '<div>' + text + '</div>';
     }
 
     function getRandomDifferentElement() {

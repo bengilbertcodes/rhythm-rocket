@@ -62,7 +62,6 @@ h2 {
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: lightgray 3px 5px 3px;  
-    font-size: 150%;
     justify-content: center;
 }
 
@@ -81,6 +80,7 @@ h2 {
     position: relative;
     display: flex;
     padding: 4px;
+    margin-top: 10px;
     color: black;
     background-color: white;
     border: 2px solid black;
@@ -111,6 +111,9 @@ h2 {
 
 #scoreBox {
     margin-top: 10px;
+    padding-left: .5em;
+    padding-right: .5em;
+    font-size: 200%;
 }
 
 /* footer styles */
