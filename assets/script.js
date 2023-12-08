@@ -80,6 +80,8 @@ var currentSelection = null;
 
         // Enable the listen button and assign the audio source
         enableListenButton(randomElement.audioSrc);
+
+        
     }
 
     function removeElementsFromBoxes() {
