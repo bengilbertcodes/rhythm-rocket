@@ -154,19 +154,25 @@ var currentSelection = null;
         // reset the selection
         currentSelection = null;
 
+        // reset count
+        count = 0;
+
         //change button text back to start
         changeButtonText('Start');
 
     }
 
+    var count = 0;
+
     function updateScore() {
         var startText = document.getElementById('start-overlay-text').textContent;
 
-        let btn = document.getElementById('start-button');
         let disp = document.getElementById('scoreCount');
 
         if (startText === 'Next Card') {
-            count++;
-            disp.innerHTML = count;
-        }
+            if (count === 0) {
+            } 
+        } 
+        
+        disp.innerHTML = count++;
     }
