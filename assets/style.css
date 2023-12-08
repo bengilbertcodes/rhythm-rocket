@@ -3,7 +3,6 @@
 body {
     margin: 0;
     display: flex;
-
     flex-direction: column;
     min-height: 100vh;
     background-image: url(images/cosmos.png);
@@ -11,8 +10,9 @@ body {
     font-family: 'Trispace';
 }
 
+/* heading styles */
 h1, h2 {
-    background: linear-gradient(to right, transparent , aliceblue 10% 90% , transparent); /* Set your initial background color */
+    background: linear-gradient(to right, transparent , aliceblue 10% 90% , transparent);
 }
 
 h1 {
@@ -33,10 +33,12 @@ h2 {
     align-items: center;
 }
 
+/* text styles */
 .text-center {
     text-align: center;
 }
 
+/* card and box styles */
 .card-piles,
 .action-box-container {
     display: flex;
@@ -119,7 +121,56 @@ h2 {
 /* footer styles */
 
 footer {
+    display: flex;
+    justify-content: space-around;
     background-color: aliceblue;
-    height: 35px;
+    height: 3rem;
     width: 100%;
 }
+
+#myBtn {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background-color: orange;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
