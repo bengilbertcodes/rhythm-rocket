@@ -1,5 +1,6 @@
 var count = 0;
 
+// animate the action boxes
 function press(element) {
     element.style.boxShadow = 'none';
     element.classList.add('clicked');
@@ -27,11 +28,11 @@ document.getElementById('start-button').addEventListener('click', function() {
 })
 
 // call playAudio function when listenButton is clicked
-document.getElementById('listenButton').addEventListener('click', function() {
+document.getElementById('listen-button').addEventListener('click', function() {
     playAudio();
 })
 
-// call resetGame to when reset button is pressed
+// call resetGame when reset button is pressed
 document.getElementById('restart-box').addEventListener('click', function() {
     resetGame();
 })
@@ -77,7 +78,7 @@ var currentSelection = null;
         // Change the start button text to 'Next Card' after the first click
         changeButtonText('Next Card');
 
-        // Enable the "Listen" button and assign the audio source
+        // Enable the listen button and assign the audio source
         enableListenButton(randomElement.audioSrc);
     }
 
@@ -126,9 +127,9 @@ var currentSelection = null;
     function enableListenButton(audioSrc) {
         
         // Enable the Listen button and assign the audio source
-        var listenButton = document.getElementById('listenButton');
+        var listenButton = document.getElementById('listen-button');
         listenButton.disabled = false;
-        listenButton.dataset.audioSrc = audioSrc; // Store audio source in a data attribute
+        listenButton.dataset.audioSrc = audioSrc;
     }
 
     function playAudio() {
@@ -137,8 +138,8 @@ var currentSelection = null;
 
         if (startText === 'Next Card') {
 
-        // Get the audio source from the data attribute
-        var audioSrc = document.getElementById('listenButton').dataset.audioSrc;
+        // Pull the audio source
+        var audioSrc = document.getElementById('listen-button').dataset.audioSrc;
 
         // Play the audio
         var audio = new Audio(audioSrc);
@@ -147,17 +148,17 @@ var currentSelection = null;
     }
 
     function resetGame() {
-        //returns the game to its opening state
+        // returns the game to its opening state
         // remove existing elements from the boxes
         removeElementsFromBoxes();
 
         // reset the selection
         currentSelection = null;
 
-        // reset count
+        // reset count and relevant HTML
         count = 0;
+        document.getElementById('scoreCount').innerHTML = '0';
 
-        //change button text back to start
         changeButtonText('Start');
 
     }
@@ -172,7 +173,6 @@ var currentSelection = null;
         if (startText === 'Next Card') {
             if (count === 0) {
             } 
-        } 
-        
+        }
         disp.innerHTML = count++;
     }
