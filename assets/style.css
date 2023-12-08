@@ -10,6 +10,13 @@ body {
     font-family: 'Trispace';
 }
 
+/* Stop user being able to select text on button clicks */
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  
 /* heading styles */
 h1, h2 {
     background: linear-gradient(to right, transparent , aliceblue 10% 90% , transparent);
