@@ -1,3 +1,4 @@
+var count = 0;
 
 function press(element) {
     element.style.boxShadow = 'none';
@@ -19,9 +20,10 @@ divElements.forEach(function(element) {
     });
   });
 
-  //call displayRandomElement
+  //call displayRandomElement and update score when start button is clicked
 document.getElementById('start-button').addEventListener('click', function() {
     displayRandomElements();
+    updateScore();
 })
 
 // call playAudio function when listenButton is clicked
@@ -155,4 +157,16 @@ var currentSelection = null;
         //change button text back to start
         changeButtonText('Start');
 
+    }
+
+    function updateScore() {
+        var startText = document.getElementById('start-overlay-text').textContent;
+
+        let btn = document.getElementById('start-button');
+        let disp = document.getElementById('scoreCount');
+
+        if (startText === 'Next Card') {
+            count++;
+            disp.innerHTML = count;
+        }
     }
