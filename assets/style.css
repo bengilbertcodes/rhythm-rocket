@@ -128,6 +128,22 @@ h2 {
     margin: 0;
     
 }
+
+#start-game {
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 20px;
+    font-size: 120%;
+}
+#start-game p {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin: 0;
+}
+
+#start-game p:hover {
+    background-image: linear-gradient(yellow, orange, red);
+}
 /* footer styles */
 
 footer {
