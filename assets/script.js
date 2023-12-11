@@ -37,6 +37,11 @@ document.getElementById('restart-box').addEventListener('click', function() {
     resetGame();
 })
 
+document.getElementById('start-game').addEventListener('click', function() {
+    removeElementsFromBoxes();
+    setUpGame();
+})
+
 // Create multi-dimensional array with the three elements - shape img, notes img, audio + title. 
 // call each element to different box when start is clicked
 
@@ -81,7 +86,6 @@ var currentSelection = null;
         // Enable the listen button and assign the audio source
         enableListenButton(randomElement.audioSrc);
 
-        
     }
 
     function removeElementsFromBoxes() {
@@ -178,6 +182,23 @@ var currentSelection = null;
         }
         disp.innerHTML = count++;
     }
+
+// Rhythm Match Game scripts
+function setUpGame() {
+    // change Card Count to Score and reset
+    document.getElementById('scoreBoxText').textContent = 'Score: ';
+    
+    document.getElementById('scoreCount').textContent = '0';
+    // change Draw Card to True and Reset to False
+    document.getElementById('start-overlay-text').textContent = 'True';
+    document.getElementById('reset-overlay-text').textContent = 'False';
+    document.getElementById('action-box-container').style.justifyContent = 'center';
+
+    // display title in middle box
+    document.getElementById('title-box').innerHTML = 'Does the image match the rhythm? <br> True or False?';
+    document.getElementById('title-box').style.fontSize = '200%';
+
+}
 
     // Get the modal
 var modal = document.getElementById("myModal");

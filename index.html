@@ -38,7 +38,7 @@
             </div>
        </div>
     
-       <div class="action-box-container">
+       <div id="action-box-container" class="action-box-container">
             <div id="start-button" class="action-box">
                 <img src="assets/images/check-mark.webp" alt="Image of a blue check-mark"> 
                 <div id="start-overlay-text" class="overlay-text">
@@ -48,21 +48,21 @@
     
             <div id="listen-button" class="action-box">
                 <img src="assets/images/play.webp" alt="Image of a green play button">
-                <div class="overlay-text">
+                <div id="listen-overlay-text" class="overlay-text">
                     Listen
                 </div> 
             </div>
-        
             <div id="restart-box" class="action-box">
                 <img src="assets/images/restart.webp" alt="Image of blue restart symbol">
-                <div class="overlay-text">
+                <div id="reset-overlay-text" class="overlay-text">
                     Reset
                 </div> 
             </div>
+            
        </div>
     <div id="score">
            <div id="scoreBox" class="box">
-              <p>Card Count: <span id="scoreCount">0</span></p>
+              <p id="scoreBoxText">Card Count: </p> <span id="scoreCount">0</span>
            </div>
     </div>
 
@@ -70,6 +70,7 @@
         <p>Play the <br>Rhythm Match Game</p>
     </div>
 
+<!-- keeps anything below here at the bottom of page -->
     <div style="flex-grow:1"></div>
 <footer>
     <div id="instructions">
