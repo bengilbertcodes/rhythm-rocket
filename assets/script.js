@@ -345,7 +345,8 @@ function changePlayButtonText(newText) {
     document.getElementById('play-overlay-text').textContent = newText;
 }
 
-document.getElementById('restartGameBox').addEventListener('click', function(){
+// restart the game - returns to original state
+document.getElementById('restartGameBox').addEventListener('click', function() {
     setUpGame();
     removeElementsFromBoxes();
     resetButtonColor();
@@ -353,6 +354,12 @@ document.getElementById('restartGameBox').addEventListener('click', function(){
     document.getElementById('title-box').innerHTML = 'Does the image match the rhythm? <br> True or False?';
     document.getElementById('title-box').style.fontSize = '200%';
 });
+
+// return to the practice landing game
+document.getElementById('needMorePracticeBox').addEventListener('click', function() {
+    // Refresh the page
+    location.reload();
+})
 
 
 // Modal script
