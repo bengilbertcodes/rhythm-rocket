@@ -224,8 +224,20 @@ const falseButton = document.getElementById('false-button');
 console.log(trueButton.dataset);
 console.log(falseButton.dataset);
 
-// true and false functions
-function truee(){
+trueButton.addEventListener('click', () => buttonClick(trueButton));
+falseButton.addEventListener('click', () => buttonClick(falseButton));
+
+function buttonClick(button) {
+    if (button.dataset.value === "true" && matchImages === true) {
+        truee();
+    } else if (button.dataset.value === "false" && matchImages === false) {
+        truee();
+    } else {
+        falsee();
+    }
+}
+
+function truee() {
     alert('Brilliant!');
 }
 
@@ -249,7 +261,8 @@ function trueFalse() {
     console.log("Index for element 2:", randomElement.index2);
 
     // Check if both images come from the same object - true or false
-    var matchImages = randomElement.index1 === randomElement.index2;
+    matchImages = randomElement.index1 === randomElement.index2;
+    
     console.log(matchImages);
 }
 
