@@ -33,7 +33,7 @@ document.getElementById('listen-button').addEventListener('click', function() {
 })
 
 // call resetGame when reset button is pressed or change reset to False button
-document.getElementById('restart-box').addEventListener('click', function() {
+document.getElementById('reset-button').addEventListener('click', function() {
     resetGame();
 })
 
@@ -190,9 +190,13 @@ function setUpGame() {
     document.getElementById('scoreBoxText').textContent = 'Score: ';
     document.getElementById('scoreCount').textContent = '0';
 
-    // change Draw Card to True and Reset to False
-    document.getElementById('start-overlay-text').textContent = 'True';
-    document.getElementById('reset-overlay-text').textContent = 'False';
+    // hide start and reset buttons and show true and false buttons
+    document.getElementById('start-button').style.visibility = 'hidden';
+    document.getElementById('reset-button').style.visibility = 'hidden'
+
+    document.getElementById('true-button').style.visibility = 'visible';
+    document.getElementById('false-button').style.visibility = 'visible';
+
     document.getElementById('listen-overlay-text').textContent = 'Go!';
     document.getElementById('action-box-container').style.justifyContent = 'center';
 
@@ -205,7 +209,21 @@ function setUpGame() {
 
     // Start game button becomes return to landing page game/tutorial
     document.getElementById('start-game').textContent = 'Back to practice';
+
+    // change or remove img from true and false buttons
+       
 }
+
+// true and false functions
+function truee(){
+    alert('Brilliant!');
+}
+
+function falsee() {
+    alert('Bad luck, try again');
+}
+
+
 
 // Modal script
     // Get the modal

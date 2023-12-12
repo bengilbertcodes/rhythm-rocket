@@ -118,6 +118,11 @@ h2 {
     transform: scale(0.95);
 }
 
+#true-button,
+#false-button {
+    visibility: hidden;
+}
+
 #scoreBox {
     margin-top: 10px;
     padding-left: .5em;
