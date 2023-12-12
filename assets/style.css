@@ -127,6 +127,15 @@ h2 {
     height: 5rem;
 }
 
+#play-button {
+    background-color: #E6BE4C;
+}
+
+#restartGameBox,
+#needMorePracticeBox {
+    display: none;
+}
+
 /* show for practice page */
 #listen-button {
     display: block;
@@ -162,7 +171,7 @@ h2 {
 }
 
 #start-game:hover {
-    background-image: linear-gradient(yellow, orange, red);
+    background-image: linear-gradient(yellow, orange, #F04D37);
 }
 /* footer styles */
 

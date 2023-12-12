@@ -219,8 +219,6 @@ function setUpGame() {
 }
 
 
-
-
 const trueButton = document.getElementById('true-button');
 const falseButton = document.getElementById('false-button');
 const playButton = document.getElementById('play-button');
@@ -292,15 +290,20 @@ function trueFalse() {
     console.log(matchImages);
 
     // reset background color
+    resetButtonColor();
+
+    //disable the playButton and enable the true and false buttons
+    playButton.removeEventListener('click', playButtonClickHandler);
+    trueButton.addEventListener('click', trueButtonHandler);
+    falseButton.addEventListener('click', falseButtonHandler);
+}
+
+function resetButtonColor() {
     var buttons = document.getElementsByClassName('trueFalseButton');
 
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].style.backgroundColor = 'aliceblue';
     }
-    //disable the playButton and enable the true and false buttons
-    playButton.removeEventListener('click', playButtonClickHandler);
-    trueButton.addEventListener('click', trueButtonHandler);
-    falseButton.addEventListener('click', falseButtonHandler);
 }
 
 function getTwoRandomImages() {
@@ -341,6 +344,15 @@ function changePlayButtonText(newText) {
     // Change the button text
     document.getElementById('play-overlay-text').textContent = newText;
 }
+
+document.getElementById('restartGameBox').addEventListener('click', function(){
+    setUpGame();
+    removeElementsFromBoxes();
+    resetButtonColor();
+    changePlayButtonText('Play');
+    document.getElementById('title-box').innerHTML = 'Does the image match the rhythm? <br> True or False?';
+    document.getElementById('title-box').style.fontSize = '200%';
+});
 
 
 // Modal script
