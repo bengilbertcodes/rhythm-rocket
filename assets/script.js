@@ -239,6 +239,12 @@ function trueFalse() {
     // change play button text to next card
     changePlayButtonText('Next Card');
 
+    console.log("Index for element 1:", randomElement.index1);
+    console.log("Index for element 2:", randomElement.index2);
+
+    // Check if both images come from the same object
+    var matchImages = randomElement.index1 === randomElement.index2;
+    console.log(matchImages);
 }
 
 function getTwoRandomImages() {
@@ -253,9 +259,14 @@ function getTwoRandomImages() {
     // Return the randomly selected elements
     return {
         element1: element1,
-        element2: element2
+        element2: element2,
+        index1: index1,
+        index2: index2
     };
+
 }
+
+
 
 function changePlayButtonText(newText) {
     // Change the button text
