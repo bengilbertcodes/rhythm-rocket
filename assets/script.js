@@ -191,13 +191,15 @@ function setUpGame() {
     document.getElementById('scoreCount').textContent = '0';
 
     // hide start and reset buttons and show true and false buttons
-    document.getElementById('start-button').style.visibility = 'hidden';
-    document.getElementById('reset-button').style.visibility = 'hidden'
+    document.getElementById('start-button').style.display = 'none';
+    document.getElementById('reset-button').style.display = 'none';
 
-    document.getElementById('true-button').style.visibility = 'visible';
-    document.getElementById('false-button').style.visibility = 'visible';
+    document.getElementById('true-button').style.display = 'block';
+    document.getElementById('false-button').style.display = 'block';
 
-    document.getElementById('listen-overlay-text').textContent = 'Go!';
+    document.getElementById('listen-button').style.display = 'none';
+    document.getElementById('play-button').style.display = 'block';
+
     document.getElementById('action-box-container').style.justifyContent = 'center';
 
     // display title in middle box
@@ -209,8 +211,6 @@ function setUpGame() {
 
     // Start game button becomes return to landing page game/tutorial
     document.getElementById('start-game').textContent = 'Back to practice';
-
-    // change or remove img from true and false buttons
        
 }
 
