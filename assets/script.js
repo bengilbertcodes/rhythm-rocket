@@ -226,19 +226,20 @@ const playButton = document.getElementById('play-button');
 console.log(trueButton.dataset);
 console.log(falseButton.dataset);
 
-// // Click play to start the Rhythm Match game
-// playButton.addEventListener('click', function() {
-//     trueFalse();
-// })
+        // 
+        // playButton.addEventListener('click', function() {
+        //     trueFalse();
+        // })
 
+// Click play to start the Rhythm Match game
 playButton.addEventListener('click', playButtonClickHandler);
 
-// trueButton.addEventListener('click', function() {
-//     buttonClick(this);
-// });
-// falseButton.addEventListener('click', function() {
-//     buttonClick(this);
-// });
+        // trueButton.addEventListener('click', function() {
+        //     buttonClick(this);
+        // });
+        // falseButton.addEventListener('click', function() {
+        //     buttonClick(this);
+        // });
 
 
 // checks button press and matchImages are true
@@ -308,7 +309,7 @@ function trueFalse() {
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].style.backgroundColor = 'aliceblue';
     }
-
+    //disable the playButton and enable the true and false buttons
     playButton.removeEventListener('click', playButtonClickHandler);
     trueButton.addEventListener('click', trueButtonHandler);
     falseButton.addEventListener('click', falseButtonHandler);
