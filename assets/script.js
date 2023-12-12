@@ -14,7 +14,7 @@ function press(element) {
 
 var divElements = document.querySelectorAll('.action-box');
 
-// Add event listener to each div element
+// Add event listener to each div element to animate all buttons
 divElements.forEach(function(element) {
     element.addEventListener('click', function() {
       press(this);
@@ -37,12 +37,13 @@ document.getElementById('reset-button').addEventListener('click', function() {
     resetGame();
 })
 
-// Start the rhythm match game when clicked. Removes elements and changes buttons
+// Set up the rhythm match game when clicked. Removes elements and changes buttons
 document.getElementById('start-game').addEventListener('click', function() {
     removeElementsFromBoxes();
     setUpGame();
 })
 
+// Click play to start the Rhythm Match game
 document.getElementById('play-button').addEventListener('click', function() {
     trueFalse();
 })
@@ -201,6 +202,7 @@ function setUpGame() {
     document.getElementById('true-button').style.display = 'block';
     document.getElementById('false-button').style.display = 'block';
 
+    // remove listen-button and add play-button
     document.getElementById('listen-button').style.display = 'none';
     document.getElementById('play-button').style.display = 'block';
 
@@ -220,6 +222,7 @@ function setUpGame() {
 
 const trueButton = document.getElementById('true-button');
 const falseButton = document.getElementById('false-button');
+const playButton = document.getElementById('play-button');
 
 console.log(trueButton.dataset);
 console.log(falseButton.dataset);
@@ -228,21 +231,24 @@ trueButton.addEventListener('click', () => buttonClick(trueButton));
 falseButton.addEventListener('click', () => buttonClick(falseButton));
 
 function buttonClick(button) {
+    
     if (button.dataset.value === "true" && matchImages === true) {
-        truee();
+        button.style.backgroundColor = '#65F098';
+        incrementScore();
     } else if (button.dataset.value === "false" && matchImages === false) {
-        truee();
-    } else {
-        falsee();
+        button.style.backgroundColor = '#65F098';
+        incrementScore();
+    } else { 
+        button.style.backgroundColor = '#F04D37';
     }
 }
 
-function truee() {
-    alert('Brilliant!');
-}
-
-function falsee() {
-    alert('Bad luck, try again');
+function incrementScore() {
+    var scoreElement = document.getElementById('scoreCount');
+    var score = parseInt(scoreElement.textContent, 10);
+    score++;
+    scoreElement.textContent = score;
+    console.log('add one to score');
 }
 
 function trueFalse() {
@@ -264,6 +270,14 @@ function trueFalse() {
     matchImages = randomElement.index1 === randomElement.index2;
     
     console.log(matchImages);
+
+    // reset background color
+    var buttons = document.getElementsByClassName('trueFalseButton');
+
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].style.backgroundColor = 'aliceblue';
+    }
+
 }
 
 function getTwoRandomImages() {
@@ -273,7 +287,7 @@ function getTwoRandomImages() {
 
     // Adjust the probability of getting the same object for the second image to increase true result
     let randomChance = Math.random();
-    let threshold = 0.7;
+    let threshold = 0.6;
 
     let index2;
 
