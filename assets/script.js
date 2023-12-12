@@ -23,30 +23,18 @@ divElements.forEach(function(element) {
 
 //call displayRandomElement and update score when start button is clicked or set button to 'True'
 document.getElementById('start-button').addEventListener('click', function() {
-    var startTrue = document.getElementById('start-button').innerHTML;
-    
-    if (startTrue === 'Draw Card') {
     displayRandomElements();
     updateScore();
-    } alert('True button');
 })
 
-// call playAudio function when listenButton is clicked
+// call playAudio function when listen button is clicked
 document.getElementById('listen-button').addEventListener('click', function() {
-    var playGame = document.getElementById('listen-button').innerHTML;
-
-    if (playGame === 'Listen') {
     playAudio();
-    } alert('Play Game');
 })
 
 // call resetGame when reset button is pressed or change reset to False button
 document.getElementById('restart-box').addEventListener('click', function() {
-    var startFalse = document.getElementById('restart-box').innerHTML;
-
-    if (startFalse === 'Reset') {
     resetGame();
-    } alert('false button');
 })
 
 // Start the rhythm match game when clicked. Removes elements and changes buttons
@@ -214,6 +202,9 @@ function setUpGame() {
 
     // hide h2
     document.getElementById('headingTwo').style.display = 'none';
+
+    // Start game button becomes return to landing page game/tutorial
+    document.getElementById('start-game').textContent = 'Back to practice';
 }
 
 // Modal script
