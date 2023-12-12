@@ -238,8 +238,7 @@ function trueFalse() {
 
     // change play button text to next card
     changePlayButtonText('Next Card');
-    
-    // do both img come from same object true or false - does this go here?
+
 }
 
 function getTwoRandomImages() {
