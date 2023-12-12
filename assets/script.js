@@ -218,6 +218,12 @@ function setUpGame() {
        
 }
 
+const trueButton = document.getElementById('true-button');
+const falseButton = document.getElementById('false-button');
+
+console.log(trueButton.dataset);
+console.log(falseButton.dataset);
+
 // true and false functions
 function truee(){
     alert('Brilliant!');
@@ -242,7 +248,7 @@ function trueFalse() {
     console.log("Index for element 1:", randomElement.index1);
     console.log("Index for element 2:", randomElement.index2);
 
-    // Check if both images come from the same object
+    // Check if both images come from the same object - true or false
     var matchImages = randomElement.index1 === randomElement.index2;
     console.log(matchImages);
 }
@@ -265,7 +271,6 @@ function getTwoRandomImages() {
     };
 
 }
-
 
 
 function changePlayButtonText(newText) {
