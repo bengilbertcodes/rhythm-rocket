@@ -43,6 +43,10 @@ document.getElementById('start-game').addEventListener('click', function() {
     setUpGame();
 })
 
+document.getElementById('play-button').addEventListener('click', function() {
+    trueFalse();
+})
+
 // Create multi-dimensional array with the three elements - shape img, notes img, audio + title. 
 // call each element to different box when start is clicked
 
@@ -223,6 +227,41 @@ function falsee() {
     alert('Bad luck, try again');
 }
 
+function trueFalse() {
+    // when user clicks play
+    // add random img to shape box and note box
+    var randomElement = getTwoRandomImages();
+    currentSelection = randomElement;
+
+    displayImageInBox('shape-box', randomElement.element1.imageSrc); 
+    displayImageInBox('notes-box', randomElement.element2.imageTwoSrc);
+
+    // change play button text to next card
+    changePlayButtonText('Next Card');
+    
+    // do both img come from same object true or false - does this go here?
+}
+
+function getTwoRandomImages() {
+    // Get a random element for the first image
+    let index1 = Math.floor(Math.random() * allElements.length);
+    let element1 = allElements[index1];
+
+    // Get a random index for the second image
+    let index2 = Math.floor(Math.random() * allElements.length);
+    let element2 = allElements[index2];
+
+    // Return the randomly selected elements
+    return {
+        element1: element1,
+        element2: element2
+    };
+}
+
+function changePlayButtonText(newText) {
+    // Change the button text
+    document.getElementById('play-overlay-text').textContent = newText;
+}
 
 
 // Modal script

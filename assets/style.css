@@ -118,7 +118,7 @@ h2 {
     transform: scale(0.95);
 }
 
-
+/* hide these buttons for practice page */
 #play-button,
 #true-button,
 #false-button {
@@ -127,6 +127,7 @@ h2 {
     height: 5rem;
 }
 
+/* show for practice page */
 #listen-button {
     display: block;
 }
