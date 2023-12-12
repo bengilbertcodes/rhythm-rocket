@@ -43,10 +43,6 @@ document.getElementById('start-game').addEventListener('click', function() {
     setUpGame();
 })
 
-// Click play to start the Rhythm Match game
-document.getElementById('play-button').addEventListener('click', function() {
-    trueFalse();
-})
 
 // Create multi-dimensional array with the three elements - shape img, notes img, audio + title. 
 // call each element to different box when start is clicked
@@ -220,6 +216,9 @@ function setUpGame() {
        
 }
 
+
+
+
 const trueButton = document.getElementById('true-button');
 const falseButton = document.getElementById('false-button');
 const playButton = document.getElementById('play-button');
@@ -227,9 +226,21 @@ const playButton = document.getElementById('play-button');
 console.log(trueButton.dataset);
 console.log(falseButton.dataset);
 
-trueButton.addEventListener('click', () => buttonClick(trueButton));
-falseButton.addEventListener('click', () => buttonClick(falseButton));
+// // Click play to start the Rhythm Match game
+// playButton.addEventListener('click', function() {
+//     trueFalse();
+// })
 
+playButton.addEventListener('click', playButtonClickHandler);
+
+trueButton.addEventListener('click', function() {
+    buttonClick(this);
+});
+falseButton.addEventListener('click', function() {
+    buttonClick(this);
+});
+
+// checks button press and matchImages are true
 function buttonClick(button) {
     
     if (button.dataset.value === "true" && matchImages === true) {
@@ -243,6 +254,7 @@ function buttonClick(button) {
     }
 }
 
+// Increases the score by 1
 function incrementScore() {
     var scoreElement = document.getElementById('scoreCount');
     var score = parseInt(scoreElement.textContent, 10);
@@ -251,6 +263,11 @@ function incrementScore() {
     console.log('add one to score');
 }
 
+function playButtonClickHandler() {
+    trueFalse();
+}
+
+// start the rhythm match game
 function trueFalse() {
     // when user clicks play
     // add random img to shape box and note box
@@ -277,6 +294,8 @@ function trueFalse() {
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].style.backgroundColor = 'aliceblue';
     }
+
+    playButton.removeEventListener('click', playButtonClickHandler);
 
 }
 
