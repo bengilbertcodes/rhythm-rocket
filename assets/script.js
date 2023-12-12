@@ -233,12 +233,13 @@ console.log(falseButton.dataset);
 
 playButton.addEventListener('click', playButtonClickHandler);
 
-trueButton.addEventListener('click', function() {
-    buttonClick(this);
-});
-falseButton.addEventListener('click', function() {
-    buttonClick(this);
-});
+// trueButton.addEventListener('click', function() {
+//     buttonClick(this);
+// });
+// falseButton.addEventListener('click', function() {
+//     buttonClick(this);
+// });
+
 
 // checks button press and matchImages are true
 function buttonClick(button) {
@@ -246,12 +247,16 @@ function buttonClick(button) {
     if (button.dataset.value === "true" && matchImages === true) {
         button.style.backgroundColor = '#65F098';
         incrementScore();
+        playButton.addEventListener('click', playButtonClickHandler);
     } else if (button.dataset.value === "false" && matchImages === false) {
         button.style.backgroundColor = '#65F098';
         incrementScore();
+        playButton.addEventListener('click', playButtonClickHandler);
     } else { 
         button.style.backgroundColor = '#F04D37';
-    }
+        playButton.addEventListener('click', playButtonClickHandler);
+    } trueButton.removeEventListener('click', trueButtonHandler);
+    falseButton.removeEventListener('click', falseButtonHandler);
 }
 
 // Increases the score by 1
@@ -263,8 +268,17 @@ function incrementScore() {
     console.log('add one to score');
 }
 
+// button handlers - allows eventlisteners to be enabled and disabled
 function playButtonClickHandler() {
     trueFalse();
+}
+
+function trueButtonHandler() {
+    buttonClick(this);
+}
+
+function falseButtonHandler() {
+    buttonClick(this);
 }
 
 // start the rhythm match game
@@ -296,7 +310,8 @@ function trueFalse() {
     }
 
     playButton.removeEventListener('click', playButtonClickHandler);
-
+    trueButton.addEventListener('click', trueButtonHandler);
+    falseButton.addEventListener('click', falseButtonHandler);
 }
 
 function getTwoRandomImages() {
