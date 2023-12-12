@@ -194,9 +194,13 @@ function setUpGame() {
     // hide start and reset buttons and show true and false buttons
     document.getElementById('start-button').style.display = 'none';
     document.getElementById('reset-button').style.display = 'none';
+    document.getElementById('start-game').style.display = 'none';
 
     document.getElementById('true-button').style.display = 'block';
     document.getElementById('false-button').style.display = 'block';
+
+    document.getElementById('restartGameBox').style.display = 'block';
+    document.getElementById('needMorePracticeBox').style.display = 'block';
 
     // remove listen-button and add play-button
     document.getElementById('listen-button').style.display = 'none';
@@ -211,8 +215,6 @@ function setUpGame() {
     // hide h2
     document.getElementById('headingTwo').style.display = 'none';
 
-    // Start game button becomes return to landing page game/tutorial
-    document.getElementById('start-game').textContent = 'Back to practice';
        
 }
 
@@ -226,21 +228,8 @@ const playButton = document.getElementById('play-button');
 console.log(trueButton.dataset);
 console.log(falseButton.dataset);
 
-        // 
-        // playButton.addEventListener('click', function() {
-        //     trueFalse();
-        // })
-
 // Click play to start the Rhythm Match game
 playButton.addEventListener('click', playButtonClickHandler);
-
-        // trueButton.addEventListener('click', function() {
-        //     buttonClick(this);
-        // });
-        // falseButton.addEventListener('click', function() {
-        //     buttonClick(this);
-        // });
-
 
 // checks button press and matchImages are true
 function buttonClick(button) {
@@ -257,7 +246,7 @@ function buttonClick(button) {
         button.style.backgroundColor = '#F04D37';
         playButton.addEventListener('click', playButtonClickHandler);
     } trueButton.removeEventListener('click', trueButtonHandler);
-    falseButton.removeEventListener('click', falseButtonHandler);
+      falseButton.removeEventListener('click', falseButtonHandler);
 }
 
 // Increases the score by 1
@@ -266,7 +255,6 @@ function incrementScore() {
     var score = parseInt(scoreElement.textContent, 10);
     score++;
     scoreElement.textContent = score;
-    console.log('add one to score');
 }
 
 // button handlers - allows eventlisteners to be enabled and disabled

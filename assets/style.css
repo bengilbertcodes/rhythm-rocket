@@ -144,9 +144,14 @@ h2 {
     
 }
 
-#start-game {
-    margin-left: 45%;
-    margin-right: 45%;
+#gameBoxContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#start-game,
+#restartGameBox,
+#needMorePracticeBox {
     margin-top: 20px;
     font-size: 120%;
 }
