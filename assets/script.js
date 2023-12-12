@@ -271,8 +271,22 @@ function getTwoRandomImages() {
     let index1 = Math.floor(Math.random() * allElements.length);
     let element1 = allElements[index1];
 
-    // Get a random index for the second image
-    let index2 = Math.floor(Math.random() * allElements.length);
+    // Adjust the probability of getting the same object for the second image to increase true result
+    let randomChance = Math.random();
+    let threshold = 0.7;
+
+    let index2;
+
+    if (randomChance < threshold) {
+        // Choose the same object (true)
+        index2 = index1;
+    } else {
+        // Choose a different object (false)
+        do {
+            index2 = Math.floor(Math.random() * allElements.length);
+        } while (index2 === index1);
+    }
+
     let element2 = allElements[index2];
 
     // Return the randomly selected elements
