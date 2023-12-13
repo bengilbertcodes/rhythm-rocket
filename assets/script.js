@@ -312,7 +312,7 @@ function getTwoRandomImages() {
 
     // Adjust the probability of getting the same object for the second image to increase true result
     let randomChance = Math.random();
-    let threshold = 0.6;
+    let threshold = 0.7;
 
     let index2;
 
