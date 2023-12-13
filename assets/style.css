@@ -241,6 +241,29 @@ footer {
 
   /* Media Queries */
 
+  @media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 300%;
+    }
+
+    h2 {
+        font-size: 160%
+    }
+
+    #title-box {
+        height: 175px;
+        width: 262.5px;
+    }
+    .card-box {
+        width: 300px;
+        height: 187.5px;
+    }
+
+    #scoreBox {
+        font-size: 2em;
+    }
+  }
+
   @media screen and (max-width: 992px) {
     .heading-container {
         width: 100vw;
@@ -265,10 +288,10 @@ footer {
 
     .card-box,
     #title-box {
-        width: 100%;
+        width: 450px;
         height: 8rem;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 40px;
+        margin-right: 40px;
         margin-bottom: 0;
         box-shadow: none;
     }
@@ -303,12 +326,25 @@ footer {
     }
 
     #start-game {
-        margin-top: 0;
+        margin-top: 10px;
         font-size: 90%;
     }
 
     #scoreBox {
-        margin-top: 0;
+        margin-top: 8px;
+        font-size: 1em;
+    }
+
+    #copyright p {
+        font-size: 70%;
+    }
+
+    #myBtn {
+        font-size: 70%;
+    }
+
+    footer {
+        height: 2rem;
     }
   }
 
@@ -329,12 +365,10 @@ footer {
         display: none;
     }
 
-
-    
-
-   
-
-  
-
-   
+    .card-box,
+    #title-box {
+        max-width: 275px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
   }
