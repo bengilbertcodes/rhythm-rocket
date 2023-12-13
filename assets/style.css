@@ -441,6 +441,10 @@ footer {
         display: none;
     }
 
+    .modal-header h2 {
+        display: block;
+    }
+
     .card-box,
     #title-box {
         max-width: 275px;
