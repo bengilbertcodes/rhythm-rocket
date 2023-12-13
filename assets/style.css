@@ -83,7 +83,7 @@ h2 {
 }
 
 #title-box {
-    font-size: 300%;
+    font-size: 240%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,6 +255,7 @@ footer {
     #title-box {
         height: 175px;
         width: 262.5px;
+        font-size: 150%;
     }
     .card-box {
         width: 300px;
@@ -334,10 +335,6 @@ footer {
 
     .action-box img {
         height: 50px;
-    }
-
-    #title-box {
-        font-size: 2em;
     }
 
     #start-game {

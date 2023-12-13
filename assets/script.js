@@ -210,7 +210,6 @@ function setUpGame() {
 
     // display title in middle box
     document.getElementById('title-box').innerHTML = 'Does the image match the rhythm? <br> True or False?';
-    document.getElementById('title-box').style.fontSize = '200%';
 
     // hide h2
     document.getElementById('headingTwo').style.display = 'none';
@@ -352,7 +351,6 @@ document.getElementById('restartGameBox').addEventListener('click', function() {
     resetButtonColor();
     changePlayButtonText('Play');
     document.getElementById('title-box').innerHTML = 'Does the image match the rhythm? <br> True or False?';
-    document.getElementById('title-box').style.fontSize = '200%';
 });
 
 // return to the practice landing game
