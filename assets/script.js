@@ -6,7 +6,7 @@ function press(element) {
     element.classList.add('clicked');
     
     setTimeout(function() {
-        element.style.boxShadow ='3px 5px 3px orange';
+        element.style.boxShadow ='1px 2.5px 1px orange';
         element.classList.remove('clicked');
     }, 100);
 

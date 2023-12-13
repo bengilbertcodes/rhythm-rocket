@@ -16,6 +16,11 @@ body {
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
   }
+
+img {
+    object-fit: contain;
+    width: 100%;
+}
   
 /* heading styles */
 h1, h2 {
@@ -72,6 +77,10 @@ h2 {
     justify-content: center;
 }
 
+.box img {
+    overflow: auto;
+}
+
 #title-box {
     font-size: 300%;
     display: flex;
@@ -94,7 +103,7 @@ h2 {
     background-color: aliceblue;
     border: 2px solid black;
     border-radius: 10px;
-    box-shadow: orange 3px 5px 3px;  
+    box-shadow: orange 1px 2.5px 1.5px;  
     font-size: 150%;
     justify-content: center;
     cursor: pointer;
@@ -142,10 +151,10 @@ h2 {
 }
 
 #scoreBox {
-    margin-top: 10px;
+    margin-top: 0.5rem;
     padding-left: .5em;
     padding-right: .5em;
-    font-size: 160%;
+    font-size: 1em;
 }
 
 #scoreBox p {
@@ -250,12 +259,20 @@ footer {
         margin-right: 10%;
     }
 
+    .box {
+        box-shadow: lightgray 1px 2.5px 1.5px;  
+    }
+
     .action-box {
         font-size: 80%;
     }
 
     .action-box img {
         height: 50px;
+    }
+
+    #title-box {
+        font-size: 2em;
     }
   }
 
@@ -266,7 +283,7 @@ footer {
     
     h1 {
         font-size: 180%;
-        padding: 15px;
+        padding: 0.3rem;
         margin: 0;
         margin-top: 4px;
         margin-bottom: 4px;
@@ -276,11 +293,21 @@ footer {
         display: none;
     }
 
-    .action-box {
-        font-size: 80%;
+
+    .card-piles {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .action-box img {
-        height: 50px;
+    .card-box,
+    #title-box {
+        width: 14rem;
+        height: 8rem;
+        margin-bottom: 0.3rem;
+        box-shadow: none;
     }
+
+  
+
+   
   }
