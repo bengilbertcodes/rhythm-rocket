@@ -229,3 +229,36 @@ footer {
     text-decoration: none;
     cursor: pointer;
   }
+
+  /* Media Queries */
+
+  @media screen and (max-width: 992px) {
+    .heading-container {
+        width: 100vw;
+    }
+    
+    h1 {
+        font-size: 200%;
+        padding: 3px;
+        margin: 0;
+        margin-top: 4px
+    }
+    
+    h2 {
+        font-size: 110%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .action-box {
+        font-size: 80%;
+    }
+
+    .action-box img {
+        height: 50px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    
+  }
