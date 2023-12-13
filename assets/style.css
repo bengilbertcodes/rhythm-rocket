@@ -263,8 +263,35 @@ footer {
         box-shadow: lightgray 1px 2.5px 1.5px;  
     }
 
+    .card-box,
+    #title-box {
+        width: 100%;
+        height: 8rem;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0;
+        box-shadow: none;
+    }
+
+    #shape-box,
+    #title-box {
+        margin-bottom: 4px;
+    }
+
+    .card-piles {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.3em;
+    }
+
+    .card-piles,
+    .action-box-container {
+        margin-bottom: 4px;
+    }
+
     .action-box {
         font-size: 80%;
+        margin-top: 0;
     }
 
     .action-box img {
@@ -273,6 +300,15 @@ footer {
 
     #title-box {
         font-size: 2em;
+    }
+
+    #start-game {
+        margin-top: 0;
+        font-size: 90%;
+    }
+
+    #scoreBox {
+        margin-top: 0;
     }
   }
 
@@ -294,18 +330,9 @@ footer {
     }
 
 
-    .card-piles {
-        flex-direction: column;
-        align-items: center;
-    }
+    
 
-    .card-box,
-    #title-box {
-        width: 14rem;
-        height: 8rem;
-        margin-bottom: 0.3rem;
-        box-shadow: none;
-    }
+   
 
   
 
