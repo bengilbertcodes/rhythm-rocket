@@ -1,9 +1,9 @@
 const documentHeight = () => {
-    const doc = document.documentElement
-    doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
-   }
-   window.addEventListener('resize', documentHeight)
-   documentHeight()
+    const doc = document.documentElement;
+    doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
+   };
+   window.addEventListener('resize', documentHeight);
+   documentHeight();
 
 var count = 0;
 
@@ -32,23 +32,23 @@ divElements.forEach(function(element) {
 document.getElementById('start-button').addEventListener('click', function() {
     displayRandomElements();
     updateScore();
-})
+});
 
 // call playAudio function when listen button is clicked
 document.getElementById('listen-button').addEventListener('click', function() {
     playAudio();
-})
+});
 
 // call resetGame when reset button is pressed or change reset to False button
 document.getElementById('reset-button').addEventListener('click', function() {
     resetGame();
-})
+});
 
 // Set up the rhythm match game when clicked. Removes elements and changes buttons
 document.getElementById('start-game').addEventListener('click', function() {
     removeElementsFromBoxes();
     setUpGame();
-})
+});
 
 
 // Create multi-dimensional array with the three elements - shape img, notes img, audio + title. 
@@ -364,7 +364,7 @@ document.getElementById('restartGameBox').addEventListener('click', function() {
 document.getElementById('needMorePracticeBox').addEventListener('click', function() {
     // Refresh the page
     location.reload();
-})
+});
 
 
 // Modal script
@@ -380,16 +380,16 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
   modal.style.display = "block";
-}
+};
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};

@@ -137,3 +137,4 @@ Testing using Google Chrome Dev Tools was used throughout the build of the game.
 #### W3C CSS Checker
 ![w3c-css](docs/testing/w3c-css.png)
 
+#### Lighthouse
