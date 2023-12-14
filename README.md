@@ -16,12 +16,30 @@ It uses the combination of shapes, sounds and music notes to help build the stud
   * [**Game 1 - Practice**](<#game-1---practice>)
   * [**Game 2 - Rhythm Match Game (True or False)**](<#game-2---rhythm-match-game-true-or-false>)
   * [**Modal**](<#modal>)
+  * [**Further Development and Future Ideas**](<#further-development-and-future-ideas>)
 * [**Design**](<#design>)
+  * [**Wireframes**](<#wireframes>)
+    * [**Game 1 Desktop**](<#game-1-desktop>)
+    * [**Game 1 Mobile**](<#game-1-mobile>)
+    * [**Game 2 Desktop**](<#game-2-desktop>)
+    * [**Game 2 Mobile**](<#game-2-mobile>)
+  * [**Colour Scheme**](<#colour-scheme>)
+  * [**Typography**](<#typography>)
+  * [**Cards and Buttons**](<#cards-and-buttons>)
 * [**Technologies Used**](<#technologies-used>)
 * [**Testing**](<#testing>)
+  * [**W3C HTML Checker**](<#w3c-html-checker>)
+  * [**W3C CSS Checker**](<#w3c-css-checker>)
+  * [**Lighthouse**](<#lighthouse>)
+  * [**Responsiveness Test**](<#responsiveness-test>)
 * [**Bugs**](<#bugs>)
+  * [**Unresolved Bugs**](<#unresolved-bugs>)
 * [**Deployment**](<#Deployment>)
+  * [**To deploy the project**](<#to-deploy-the-project>)
+  * [**To fork the project**](<#to-fork-the-project>)
+  * [**To clone the project**](<#to-clone-the-project>)
 * [**Credits**](<#credits>)
+  * [**Code Used**](<#code-used>)
 
 
 
@@ -51,6 +69,7 @@ It uses the combination of shapes, sounds and music notes to help build the stud
 
 ![404](docs/readme_images/404page.png)
 
+[Back to top](<#contents>)
 ## The Game and User Experience UX
 
 ### Game 1 - Practice 
@@ -84,6 +103,7 @@ It uses the combination of shapes, sounds and music notes to help build the stud
 
 ![next-stage](docs/readme_images/next-game.png)
 
+[Back to top](<#contents>)
 ### Game 2 - Rhythm Match Game (True or False)
 
 * After the button click the layout adjusts slightly, new True and False buttons replace Next Card and Reset and Play replaces Listen. More Practice and Restart Game appear at the base of the screen.
@@ -114,29 +134,43 @@ It uses the combination of shapes, sounds and music notes to help build the stud
 
 ![restart-practice](docs/readme_images/rmg3.png)
 
+[Back to top](<#contents>)
 ### Modal
 * At any time, the user can click the 'How to Play' link in the footer to open the modal and this contains clear instructions for both game modes.
 
-## Further Development and Future Ideas
+### Further Development and Future Ideas
+- Add many more objects (cards) (there are currently only three!) These can be anything from simple shapes to pictures of everyday objects.
+- Improve the audio for when the 'Listen' button is clicked.
+- The True of False game can be adapted - User could click a listen button to hear a rhythm and then match that to the shape and/or notation.
+- Mulitple choice questions could be added to expand the quiz format. For example, which of these three rhythms matches this shape?
+- create backing tracks for the user to clap/peform the rhythms along to.
+- Place two (or more) cards next to one another to form longer rhythms. 
+- A simple drag and drop music sequencer for the user to create longer rhythmic combinations or layer them with other sounds.
+- Improve the scoring functions - have previous high scores available to users (this would require user accounts).
+- Add audio response so the app could listen to the users response and match it to the correct images.
 
+[Back to top](<#contents>)
 ## Design
 
 ### Wireframes
 
 #### Game 1 Desktop
 ![Game 1 Desktop Wireframe](docs/readme_images/game1wireframe.png)
+[Back to top](<#contents>)
 
 #### Game 1 Mobile
 ![Game 1 mobile wireframe](docs/readme_images/game1mobilewireframe.png)
+[Back to top](<#contents>)
 
 #### Game 2 Desktop
 ![Game 2 desktop wireframe](docs/readme_images/game2wireframe.png)
+[Back to top](<#contents>)
 
 #### Game 2 Mobile
 ![Game 2 Mobile wireframe](docs/readme_images/game2mobilewireframe.png)
 
 
-
+[Back to top](<#contents>)
 ### Colour Scheme
 Colours chosen are all strong and fun as younger users are the expected client. Main colors tie in with the background image.
 
@@ -147,6 +181,7 @@ The font was chosen as it has some sci-fi/digital style to it to tie in with the
 
 ![Trispace-font](docs/readme_images/trispace-font.png)
 
+[Back to top](<#contents>)
 ### Cards and Buttons
 A fun, hand-drawn style is used for all the images to add to the fun element of the game. 
 
@@ -162,6 +197,7 @@ A fun, hand-drawn style is used for all the images to add to the fun element of 
 - Procreate (iPad) - used to create all the custom images for icons and cards.
 - Wavelab - used to record and edit audio clips
 
+[Back to top](<#contents>)
 ## Testing
 Testing using Google Chrome Dev Tools was used throughout the build of the game. Below you can see the results of the W3C HTML, CSS & JavaScript checkers for the finished site.
 
@@ -174,6 +210,7 @@ Testing using Google Chrome Dev Tools was used throughout the build of the game.
 #### Lighthouse
 ![Lighthouse score](docs/testing/lighthouse.png)
 
+[Back to top](<#contents>)
 ### Responsiveness Test
 
 [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) was used to test how rhe game plays and looks across the all device screen sizes. Media queries have been used in the site development to ensure good operation across devices.
@@ -190,14 +227,14 @@ The app has been tested and found to be working on the following browsers:
 - Firefox
 - Safari
 
-
+[Back to top](<#contents>)
 ## Bugs
 
-### Unsolved Bugs
+### Unresolved Bugs
 - Two users reported the app stopping (unable to load anymore cards) after 5 or 7 cards being drawn. I have not been able to replicate this problem in my IDE but will continue to monitor and adjust accordingly. 
 - One user reported being unable to open images. This was on a much older iMac (2014). Further testing required to investigate further.
 
-
+[Back to top](<#contents>)
 ## Deployment
 
 ### To deploy the project:
@@ -226,7 +263,7 @@ To clone the project:
 6. Type `git clone` and then paste the URL copied from GitHub
 7. Press enter and the local clone will be created
 
-
+[Back to top](<#contents>)
 ## Credits
 
 - All images on the site were created by Ben Gilbert except
@@ -236,3 +273,5 @@ To clone the project:
 ### Code used
 - Thank you to Gareth Mc Girr for the code used to set up the multi-dimensional array.
 - Thank you to Nirazan Basnet on [dev.to](https://dev.to/nirazanbasnet/dont-use-100vh-for-mobile-responsive-3o97) for the alternative to 100vh, improving the app on mobile devices.
+
+[Back to top](<#contents>)
