@@ -105,6 +105,10 @@ It uses the combination of shapes, sounds and music notes to help build the stud
 
 ## Design
 
+### Wireframes
+
+
+
 ### Colour Scheme
 Colours chosen are all strong and fun as younger users are the expected client. Main colors tie in with the background image.
 
@@ -125,5 +129,11 @@ A fun, hand-drawn style is used for all the images to add to the fun element of 
 - Javascript - for the functionality of the game. 
 
 ## Testing
+Testing using Google Chrome Dev Tools was used throughout the build of the game. Below you can see the results of the W3C HTML, CSS & JavaScript checkers for the finished site.
 
 #### W3C HTML Checker
+![w3c-html](docs/testing/w3c-html.png)
+
+#### W3C CSS Checker
+![w3c-css](docs/testing/w3c-css.png)
+
