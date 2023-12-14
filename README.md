@@ -10,6 +10,20 @@ It uses the combination of shapes, sounds and music notes to help build the stud
 
 ## Contents
 
+* [**Features**](<#features>)
+  * [**Sitewide**](<#sitewide>)
+* [**The Game and User Experience UX**](<#the-game-and-user-experience-ux>)
+  * [**Game 1 - Practice**](<#game-1---practice>)
+  * [**Game 2 - Rhythm Match Game (True or False)**](<#game-2---rhythm-match-game-true-or-false>)
+  * [**Modal**](<#modal>)
+* [**Design**](<#design>)
+* [**Technologies Used**](<#technologies-used>)
+* [**Testing**](<#testing>)
+* [**Bugs**](<#bugs>)
+* [**Deployment**](<#Deployment>)
+* [**Credits**](<#credits>)
+
+
 
 ## Features
 
@@ -103,6 +117,8 @@ It uses the combination of shapes, sounds and music notes to help build the stud
 ### Modal
 * At any time, the user can click the 'How to Play' link in the footer to open the modal and this contains clear instructions for both game modes.
 
+## Further Development and Future Ideas
+
 ## Design
 
 ### Wireframes
@@ -143,6 +159,8 @@ A fun, hand-drawn style is used for all the images to add to the fun element of 
 - Favicon.io - https://favicon.io/ used to generate custom favicon.
 - ImageResizer - https://imageresizer.com/ used for resizing the images.
 - Balsamiq - used to create the wireframes.
+- Procreate (iPad) - used to create all the custom images for icons and cards.
+- Wavelab - used to record and edit audio clips
 
 ## Testing
 Testing using Google Chrome Dev Tools was used throughout the build of the game. Below you can see the results of the W3C HTML, CSS & JavaScript checkers for the finished site.
@@ -155,3 +173,66 @@ Testing using Google Chrome Dev Tools was used throughout the build of the game.
 
 #### Lighthouse
 ![Lighthouse score](docs/testing/lighthouse.png)
+
+### Responsiveness Test
+
+[Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) was used to test how rhe game plays and looks across the all device screen sizes. Media queries have been used in the site development to ensure good operation across devices.
+
+The app has been tested and found to be working on the following devices and operating systems:
+- Google Pixel 7a and 8
+- iPad Pro and Air
+- MacBook Pro (macOS Montery)
+- Windows 10 pc
+
+The app has been tested and found to be working on the following browsers:
+- Chrome
+- Edge
+- Firefox
+- Safari
+
+
+## Bugs
+
+### Unsolved Bugs
+- Two users reported the app stopping (unable to load anymore cards) after 5 or 7 cards being drawn. I have not been able to replicate this problem in my IDE but will continue to monitor and adjust accordingly. 
+- One user reported being unable to open images. This was on a much older iMac (2014). Further testing required to investigate further.
+
+
+## Deployment
+
+### To deploy the project:
+GitHub pages was used to deploy the live site as follows:
+1. Login to GitHub
+2. Go to the repository [bengilbertcodes/rhythm-rocket](https://github.com/bengilbertcodes/rhythm-rocket)
+3. Click the `Settings` tab
+4. Click the `Pages` tab
+5. Under the 'Build and Deployment' section select the `Deploy from a branch` from the dropdown menu
+6. Select the `main` and `/root` dropdown menu options
+7. Click `save` and after a few minutes the site will be live 
+
+### To Fork the project
+To make a copy of the GitHub Repository you can fork a copy to edit it without changing the root file. This can then be used to update the original repository. To fork take the following steps:
+1. Login to GitHub
+2. Go to the repository [bengilbertcodes/rhythm-rocket](https://github.com/bengilbertcodes/rhythm-rocket)
+3. On the top right-hand side of the page click the `fork` button and save a copy of the original repository to your GitHub account.
+
+### To Clone the project
+To clone the project:
+1. Click the `code` button  
+2. Click the `local` tab
+3. Under HTTPS click the clipboard icon to copy the URL
+4. In your IDE of choice, open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made
+6. Type `git clone` and then paste the URL copied from GitHub
+7. Press enter and the local clone will be created
+
+
+## Credits
+
+- All images on the site were created by Ben Gilbert except
+- Background (cosmos) image - from [Pixabay](https://pixabay.com/illustrations/cosmos-rockets-spaceships-ufos-5809271/). Created by Mk_al and free for use under the Pixabay Content License. 
+- Audio created 
+
+### Code used
+- Thank you to Gareth Mc Girr for the code used to set up the multi-dimensional array.
+- Thank you to Nirazan Basnet on [dev.to](https://dev.to/nirazanbasnet/dont-use-100vh-for-mobile-responsive-3o97) for the alternative to 100vh, improving the app on mobile devices.
