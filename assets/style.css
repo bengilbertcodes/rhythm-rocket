@@ -318,6 +318,12 @@ footer {
     cursor: pointer;
   }
 
+  /* 404 styles */
+  .error-page {
+    background-color: aliceblue;
+    margin-top: 40px;
+  }
+
   /* Media Queries */
 
   @media screen and (max-width: 1200px) {
