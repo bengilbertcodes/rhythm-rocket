@@ -4,9 +4,12 @@ Rhythm Rocket is an interactive game for music students and tutors to use to hel
 It is based on a game that I have used in my own teaching practice and all my students have enojoyed. <br>
 It uses the combination of shapes, sounds and music notes to help build the students understanding of how these elements are linked and can be used in creative ways. And can be used by the student alone or used as a teaching tool by tutors in lessons.
 
-Link to deployed site: https://bengilbertcodes.github.io/rhythm-rocket/
+### [Live Site](https://bengilbertcodes.github.io/rhythm-rocket/)
 
 ![Mockup](docs/readme_images/mockup.png)
+
+## Contents
+
 
 ## Features
 
@@ -89,3 +92,25 @@ Link to deployed site: https://bengilbertcodes.github.io/rhythm-rocket/
 * If the user clicks a wrong answer (False in this case) then the button turns red and the score is not updated.
 
 ![Rhythm-game-false](docs/readme_images/rmg-false.png)
+
+* User can repeat this as many times as they want to.
+
+* Game can be restarted by clicking 'Restart Game' button.
+* User can return to the first pratice game by clicking 'More Practice' button.
+
+![restart-practice](docs/readme_images/rmg3.png)
+
+### Modal
+* At any time, the user can click the 'How to Play' link in the footer to open the modal and this contains clear instructions for both game modes.
+
+## Design
+
+### Colour Scheme
+Colours chosen are all strong and fun as younger users are the expected client. Main colors tie in with the background image.
+
+### Typography
+
+The font was chosen as it has some sci-fi/digital style to it to tie in with the theme of the app. <br>
+[Google Fonts](https://fonts.google.com) was used for the following font:
+
+![Trispace-font](docs/readme_images/trispace-font.png)
