@@ -107,6 +107,18 @@ It uses the combination of shapes, sounds and music notes to help build the stud
 
 ### Wireframes
 
+#### Game 1 Desktop
+![Game 1 Desktop Wireframe](docs/readme_images/game1wireframe.png)
+
+#### Game 1 Mobile
+![Game 1 mobile wireframe](docs/readme_images/game1mobilewireframe.png)
+
+#### Game 2 Desktop
+![Game 2 desktop wireframe](docs/readme_images/game2wireframe.png)
+
+#### Game 2 Mobile
+![Game 2 Mobile wireframe](docs/readme_images/game2mobilewireframe.png)
+
 
 
 ### Colour Scheme
@@ -123,10 +135,14 @@ The font was chosen as it has some sci-fi/digital style to it to tie in with the
 A fun, hand-drawn style is used for all the images to add to the fun element of the game. 
 
 ## Technologies Used
-### Languages
 - HTML - for the page content.
 - CSS - for the styling.
 - Javascript - for the functionality of the game. 
+- Github - source code hosted on Github and deployed using Github pages.
+- VS Code - The app was developed using VS Code IDE and commit and push using Git.
+- Favicon.io - https://favicon.io/ used to generate custom favicon.
+- ImageResizer - https://imageresizer.com/ used for resizing the images.
+- Balsamiq - used to create the wireframes.
 
 ## Testing
 Testing using Google Chrome Dev Tools was used throughout the build of the game. Below you can see the results of the W3C HTML, CSS & JavaScript checkers for the finished site.
@@ -138,3 +154,4 @@ Testing using Google Chrome Dev Tools was used throughout the build of the game.
 ![w3c-css](docs/testing/w3c-css.png)
 
 #### Lighthouse
+![Lighthouse score](docs/testing/lighthouse.png)
