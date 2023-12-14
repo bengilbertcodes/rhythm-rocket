@@ -489,7 +489,7 @@ footer {
         font-size: 120%
     }
 
-    #trueFalseText {
+    .trueFalseText {
         font-size: 16px;
     }
   }

@@ -114,3 +114,16 @@ The font was chosen as it has some sci-fi/digital style to it to tie in with the
 [Google Fonts](https://fonts.google.com) was used for the following font:
 
 ![Trispace-font](docs/readme_images/trispace-font.png)
+
+### Cards and Buttons
+A fun, hand-drawn style is used for all the images to add to the fun element of the game. 
+
+## Technologies Used
+### Languages
+- HTML - for the page content.
+- CSS - for the styling.
+- Javascript - for the functionality of the game. 
+
+## Testing
+
+#### W3C HTML Checker
