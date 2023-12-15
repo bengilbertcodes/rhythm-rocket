@@ -72,6 +72,30 @@ const allElements = [
         imageSrc: 'assets/images/red-wavy-line.webp',
         imageTwoSrc: 'assets/images/red-wavy-line-notes.webp',
         audioSrc: 'assets/media/red-wavy-line.mp3',
+    },
+    {
+        Title: 'Orange Square',
+        imageSrc: 'assets/images/orange-square.webp',
+        imageTwoSrc: 'assets/images/orange-square-notes.webp',
+        audioSrc: 'assets/media/orange.mp3',
+    },
+    {
+        Title: 'Pink Rectangle',
+        imageSrc: 'assets/images/pink-rectangle.webp',
+        imageTwoSrc: 'assets/images/pink-rectangle-notes.webp',
+        audioSrc: 'assets/media/pink-rectangle.mp3',
+    },
+    {
+        Title: 'Purple Triangle',
+        imageSrc: 'assets/images/purple-triangle.webp',
+        imageTwoSrc: 'assets/images/purple-triangle-notes.webp',
+        audioSrc: 'assets/media/purple-triangle.mp3',
+    },
+    {
+        Title: 'Yellow Banana',
+        imageSrc: 'assets/images/yellow-banana.webp',
+        imageTwoSrc: 'assets/images/yellow-banana-notes.webp',
+        audioSrc: 'assets/media/yellow-banana.mp3',
     }
 ];
 
