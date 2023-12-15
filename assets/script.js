@@ -77,7 +77,7 @@ const allElements = [
         Title: 'Orange Square',
         imageSrc: 'assets/images/orange-square.webp',
         imageTwoSrc: 'assets/images/orange-square-notes.webp',
-        audioSrc: 'assets/media/orange.mp3',
+        audioSrc: 'assets/media/orange-square.mp3',
     },
     {
         Title: 'Pink Rectangle',
